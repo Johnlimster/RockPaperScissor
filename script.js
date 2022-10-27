@@ -20,11 +20,21 @@ function playRound(playerSelection, computerSelection) {
   return "You Lost";
 }
 
+function updatePlayerSelection() {
+  alert(this.id);
+}
+
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
+const result = playRound(playerSelection, computerSelection);
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorSButton = document.getElementById("scissors");
 
-document.getElementById("compChoice").innerHTML = computerSelection;
-document.getElementById("result").innerHTML = playRound(
-  playerSelection,
-  computerSelection
-);
+rockButton.addEventListener("click", updatePlayerSelection);
+paperButton.addEventListener("click", updatePlayerSelection);
+scissorsButton.addEventListener("click", updatePlayerSelection);
+
+document.getElementById("compChoice").innerHTML =
+  "Computer's Choice: " + computerSelection;
+document.getElementById("result").innerHTML = result;
