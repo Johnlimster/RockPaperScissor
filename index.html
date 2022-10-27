@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Rock Paper Scissors</h2>
+
+    <p id="compChoice"></p>
+
+    <script>
+      function getComputerChoice() {
+        const randomNum = Math.floor(Math.random() * 3);
+        if (randomNum == 0) {
+          return "rock";
+        } else if (randomNum == 1) {
+          return "paper";
+        } else return "scissors";
+      }
+
+      document.getElementById("compChoice").innerHTML = getComputerChoice();
+    </script>
+  </body>
+</html>
