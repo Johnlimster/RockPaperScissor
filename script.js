@@ -15,16 +15,16 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection == "paper" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "paper")
   ) {
-    return "You won!";
+    return "You Won!";
   }
-  return "You Lost";
+  return "You Lost!";
 }
 
 function updatePlayerSelection(playerSelection) {
   const computerSelection = getComputerChoice();
   const result = playRound(playerSelection, computerSelection);
 
-  document.getElementById("playerChoice").innerHTML = playerSelection;
+  //   document.getElementById("playerChoice").innerHTML = playerSelection;
   document.getElementById("compChoice").innerHTML =
     "Computer's Choice: " + computerSelection;
   document.getElementById("result").innerHTML = result;
