@@ -8,21 +8,23 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  if (
+  if (playerSelection == computerSelection) {
+    return "You Tied!";
+  } else if (
     (playerSelection == "rock" && computerSelection == "scissors") ||
     (playerSelection == "paper" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "paper")
   ) {
-    return true;
+    return "You won!";
   }
-  return false;
+  return "You Lost";
 }
 
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 
+document.getElementById("compChoice").innerHTML = computerSelection;
 document.getElementById("result").innerHTML = playRound(
   playerSelection,
   computerSelection
 );
-document.getElementById("compChoice").innerHTML = getComputerChoice();
