@@ -3,4 +3,4 @@
 
 <img src='https://user-images.githubusercontent.com/54999113/198813437-09ab947d-f39c-4001-9a7f-d78162691cfc.gif' width='500' alt='Video Walkthrough' />
 
-[Live Demo] (https://johnlimster.github.io/RockPaperScissor/)👈 
+[Live Demo](https://johnlimster.github.io/RockPaperScissor/)👈 
