@@ -26,28 +26,35 @@ function scoreCheck(result) {
     document.getElementById("pScore").innerHTML = "Player: " + pScore;
   } else if (result == "You Lost!") {
     cScore++;
-    document.getElementById("cScore").innerHTML = "Player: " + cScore;
+    document.getElementById("cScore").innerHTML = "Computer: " + cScore;
   }
 }
 
-//updates the page
-function updatePlayerSelection(playerSelection, result) {
+function textToEmoji(selection) {
+  if (selection == "rock") {
+    return "✊";
+  } else if (selection == "paper") {
+    return "✋";
+  } else {
+    return "✌";
+  }
+}
+
+function updateSelection(playerSelection, computerSelection, result) {
+  playerSelection = textToEmoji(playerSelection);
+  computerSelection = textToEmoji(computerSelection);
   document.getElementById("result").innerHTML = result;
   document.getElementById("playerSelect").innerHTML = playerSelection;
+  document.getElementById("compSelect").innerHTML = computerSelection;
 }
 
 function game(playerSelection) {
   if (pScore < 5 && cScore < 5) {
     const computerSelection = getComputerChoice();
     const result = playRound(playerSelection, computerSelection);
-    updatePlayerSelection(playerSelection, result);
-
+    updateSelection(playerSelection, computerSelection, result);
     scoreCheck(result);
-    document.getElementById("compChoice").innerHTML =
-      "Computer's Choice: " + computerSelection;
-  } else {
-    alert("game over");
-  }
+  } else alert("game over");
 }
 
 let pScore = 0;

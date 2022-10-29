@@ -15,21 +15,29 @@
   <body class="main">
     <div class="paragraph">
       <p id="result">Choose your Weapon</p>
-      <p id="compChoice">First to score 5 points wins the game</p>
-      <!-- <p id="playerChoice">Choose your Weapon</p> -->
+      <p id="resultDescript">First to score 5 points wins the game</p>
     </div>
-    <div class="choices">
-      <p id = playerSelect>?</p>
+    <div class="box-container">
+      <div class="box">
+         <p id = "playerSelect" class="box-emoji">?</p>
+         <p id="pScore" class="smaller">Player: 0</p>
+      </div>
+      <div class="box">
+         <p id = "compSelect" class="box-emoji">?</p>
+         <p id="cScore" class="smaller" >Computer: 0</p>
+      </div>
     </div>
-    <div class="score">
-      <p id="pScore">Player: 0</p>
-      <p id="cScore">Computer: 0</p>
-    </div>
+    
     <div class="buttons">
       <button id="rock">&#9994</button>
       <button id="paper">&#9995</button>
       <button id="scissors">&#9996</button>
     </div>
+
+     <!-- <div class="modal" id="endgameModal">
+      <p class="modal-title" id="endgameMsg"></p>
+      <button class="btn btn-restart" id="restartBtn">Play again</button>
+    </div> -->
 
     <script src="script.js"></script>
   </body>

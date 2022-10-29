@@ -55,6 +55,26 @@ button:hover {
 
 .score {
   display: flex;
-  gap: 140px;
+  gap: 100px;
   justify-content: center;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.box .smaller {
+  font-size: 20px;
+}
+.box .box-emoji {
+  margin-left: 20px;
+}
+
+.box p {
+  font-size: 80px;
 }
